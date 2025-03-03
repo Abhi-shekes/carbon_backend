@@ -39,6 +39,12 @@ export const login = async (req, res) => {
         .json({ success: false, message: "User not found" });
     }
 
+    if (user.type == "google-auth") {
+      return res
+        .status(401)
+        .json({ success: false, message: "Kindly login using google" });
+    }
+
     // Check if password is correct
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
@@ -70,13 +76,11 @@ export const login = async (req, res) => {
     });
 
     // Respond with success
-    res
-      .status(200)
-      .json({
-        success: true,
-        type: user.type,
-        message: "Logged in successfully",
-      });
+    res.status(200).json({
+      success: true,
+      type: user.type,
+      message: "Logged in successfully",
+    });
   } catch (error) {
     console.error("Login error:", error);
     return res
@@ -143,7 +147,6 @@ export const googleLogin = async (req, res) => {
       .json({ message: "Error during Google login. Try again in some time" });
   }
 };
-
 
 export const signup = async (req, res) => {
   const { email, password, name, type = "user" } = req.body;
