@@ -8,7 +8,8 @@ import cookieParser from "cookie-parser";
 // Import route files
 import authRoutes from "./routes/authRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
-import performanceRoutes from './routes/performanceRoutes.js';
+import performanceRoutes from "./routes/performanceRoutes.js";
+import chatBotRoute from "./routes/chatBotRoutes.js";
 
 // Load env configurations
 dotenv.config();
@@ -51,7 +52,8 @@ app.get("/", (req, res) => {
 // Routes
 app.use("/auth", authRoutes);
 app.use("/contact", contactRoutes);
-app.use('/api', performanceRoutes);
+app.use("/api", performanceRoutes);
+app.use("/api", chatBotRoute);
 
 // MongoDB Connection
 mongoose
