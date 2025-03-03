@@ -235,9 +235,7 @@ export const verifyEmail = async (req, res) => {
         // send the welcome email
         await welcomeEmail(auth.email);
 
-        return res
-          .status(201)
-          .json({ success: true, message: "Email verification successful" });
+        return res.redirect(`${process.env.FRONTEND_URL}/login`);
       } else {
         console.error("Error updating account activation:", activate);
         return res

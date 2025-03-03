@@ -5,23 +5,30 @@ dotenv.config();
 const welcomeEmail = async (email) => {
   return mailSender(
     email,
-    "Welcome to E-Waste Locator! 🌍",
+    "Welcome to Eco Footprint! 🌿",
     `<div style="font-size:16px; font-family: Arial, sans-serif; color: #000;">
-        <h3 style="color: #000; font-size: 20px;">Welcome to the E-Waste Locator Community!</h3>
-        <h4 style="color: #000; font-size: 18px;">Let’s Make a Greener Future! 🌱</h4>
-        <b style="font-size: 14px;">Your Journey Towards Responsible E-Waste Disposal Starts Now!♻️</b><br>
+        <h3 style="color: #007B3D; font-size: 20px;">Welcome to the Eco Footprint Community! 🌍</h3>
+        <h4 style="color: #007B3D; font-size: 18px;">Track, Reduce, and Offset Your Carbon Footprint! 🌱</h4>
+        <b style="font-size: 14px;">Your journey towards a greener lifestyle starts now! 🌿</b><br><br>
+        
         Hi,<br>
-        Welcome to <b>E-Waste Locator</b> - your one-stop solution for finding responsible and certified e-waste disposal centers near you! 🌍<br>
-        Thank you for joining us in our mission to reduce electronic waste and promote a sustainable future. Every small step counts, and your participation makes a difference.<br>
-        Get started now by locating the nearest e-waste drop-off point and contributing to a cleaner environment.<br>
-        Whether you have old gadgets, broken appliances, or outdated tech, we’ll help you dispose of them responsibly.<br>
-        Ready to take the first step towards a sustainable future?<br><br>
+        Welcome to <b>Eco Footprint</b> – your personal guide to tracking and reducing your carbon footprint! 🌍<br>
+        Thank you for joining us in our mission to create a more sustainable planet. Your small actions can lead to big changes!<br><br>
+        
+        With Eco Footprint, you can:
+        <ul>
+          <li>📊 Track your carbon emissions.</li>
+          <li>🌍 Learn how to live a more eco-friendly life.</li>
+          <li>♻️ Discover sustainable habits and offset your footprint.</li>
+        </ul>
+        
+        Ready to start your sustainability journey?<br><br>
         
         <a href='${process.env.FRONTEND_URL}' style="text-decoration: none;">
           <button style="
-            background-color: #008000; 
+            background-color: #007B3D; 
             color: #fff; 
-            font-family: Georgia, serif; 
+            font-family: Arial, sans-serif; 
             font-size: 16px; 
             padding: 12px 30px; 
             border: none; 
@@ -31,12 +38,11 @@ const welcomeEmail = async (email) => {
             border-radius: 5px;
             display: inline-block;
             transition: background-color 0.3s ease;
-          ">Find E-Waste Centers</button>
+          ">Start Reducing Your Footprint</button>
         </a><br><br>
 
-        <span style="color: #555; font-size: 13px;">Recycle Smart, Protect the Planet.</span><br>
-        <span style="color: #555; font-size: 13px;">Together for a greener world,</span><br>
-        <b style="font-size: 14px;">Team E-Waste Locator</b>
+        <span style="color: #555; font-size: 13px;">Every action counts. Let's build a sustainable future together! 🌎</span><br>
+        <b style="font-size: 14px;">Team Eco Footprint</b>
       </div>`
   );
 };

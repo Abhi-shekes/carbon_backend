@@ -6,13 +6,13 @@ dotenv.config();
 export const accountVerificationEmail = async (email, hash) => {
   return mailSender(
     email,
-    "Verify Your Account - E-Waste Locator ♻️",
+    "Verify Your Account - Eco Footprint 🌍",
     `<div style="font-size:18px; font-family: Arial, sans-serif; color: #000;">
-      <h2 style="color: #000;">Welcome to E-Waste Locator!</h2>
-      <p>To complete your registration, please verify your email by clicking the button below:</p>
+      <h2 style="color: #007B3D;">Welcome to Eco Footprint!</h2>
+      <p>You're one step closer to tracking and reducing your carbon footprint! Please verify your email by clicking the button below:</p>
       <a href='${`${process.env.BACKEND_URL}/auth/verify/${hash}`}' style="text-decoration: none;">
         <button style="
-          background-color: #008000; 
+          background-color: #007B3D; 
           color: #fff; 
           font-family: Arial, sans-serif; 
           font-size: 16px; 
@@ -27,7 +27,7 @@ export const accountVerificationEmail = async (email, hash) => {
         ">Verify Account</button>
       </a>
       <p style="color: #555;">This link is valid for a single use.</p>
-      <p style="color: #555;">Thank you for joining us in making e-waste disposal easier and more responsible.</p>
+      <p style="color: #555;">Thank you for joining us in making a positive impact on the environment! 🌱</p>
     </div>`
   );
 };
@@ -36,13 +36,13 @@ export const accountVerificationEmail = async (email, hash) => {
 export const passwordResetEmail = async (email, hash) => {
   return mailSender(
     email,
-    "Reset Your Password - E-Waste Locator ♻️",
+    "Reset Your Password - Eco Footprint 🌱",
     `<div style="font-size:18px; font-family: Arial, sans-serif; color: #000;">
-      <h2 style="color: #000;">Forgot Your Password?</h2>
-      <p>No worries! Click the button below to reset your password:</p>
+      <h2 style="color: #007B3D;">Forgot Your Password?</h2>
+      <p>Don't worry! Click the button below to reset your password and continue your journey towards a greener lifestyle:</p>
       <a href='${`${process.env.BACKEND_URL}/auth/reset/${hash}`}' style="text-decoration: none;">
         <button style="
-          background-color: #008000; 
+          background-color: #007B3D; 
           color: #fff; 
           font-family: Arial, sans-serif; 
           font-size: 16px; 
@@ -57,7 +57,7 @@ export const passwordResetEmail = async (email, hash) => {
         ">Reset Password</button>
       </a>
       <p style="color: #555;">This link is valid for one-time use only.</p>
-      <p style="color: #555;">If you didn't request this, please ignore this email.</p>
+      <p style="color: #555;">If you didn’t request this, please ignore this email.</p>
     </div>`
   );
 };

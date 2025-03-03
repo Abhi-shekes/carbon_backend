@@ -16,10 +16,10 @@ const transporter = nodemailer.createTransport({
 const sendMail = async (to, subject, html) => {
   try {
     const info = await transporter.sendMail({
-      from: `"E Waste Locator" <${process.env.MAILUSER}>`,
+      from: `"Carbon Footprint" <${process.env.MAILUSER}>`,
       to: to,
       subject: subject,
-      text: "E Waste Locator",
+      text: "Carbon Footprint",
       html: html,
     });
 
