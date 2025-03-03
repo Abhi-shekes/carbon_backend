@@ -7,10 +7,7 @@ import cookieParser from "cookie-parser";
 
 // Import route files
 import authRoutes from "./routes/authRoutes.js";
-import locationRoutes from "./routes/locationRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
-import appointmentRoutes from "./routes/appointmentRoutes.js";
-import userRoutes from "./routes/userRoutes.js";
 
 // Load env configurations
 dotenv.config();
@@ -52,10 +49,7 @@ app.get("/", (req, res) => {
 
 // Routes
 app.use("/auth", authRoutes);
-app.use("/locations", locationRoutes);
 app.use("/contact", contactRoutes);
-app.use("/appointments", appointmentRoutes);
-app.use("/user", userRoutes);
 
 // MongoDB Connection
 mongoose
