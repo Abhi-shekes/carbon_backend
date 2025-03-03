@@ -1,6 +1,7 @@
 import express from "express";
 import {
   login,
+  googleLogin,
   signup,
   verifyEmail,
   logout,
@@ -11,6 +12,7 @@ import {
 const router = express.Router();
 
 router.post("/login", login);
+router.post("/googl-login", googleLogin);
 router.post("/signup", signup);
 router.get("/verify/:hash", verifyEmail);
 router.post("/logout", logout);
