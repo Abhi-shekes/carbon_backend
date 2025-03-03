@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
+import newsRoutes from './routes/newsRoutes.js';
 
 // Import route files
 import authRoutes from "./routes/authRoutes.js";
@@ -54,6 +55,7 @@ app.use("/auth", authRoutes);
 app.use("/contact", contactRoutes);
 app.use("/api", performanceRoutes);
 app.use("/api", chatBotRoute);
+app.use('/api', newsRoutes);
 
 // MongoDB Connection
 mongoose
