@@ -1,12 +1,21 @@
 {
-  "name": "backend",
+  "name": "carbon-footprint-backend",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "Backend service for the carbon footprint awareness website, providing APIs for real-time energy tracking and performance metrics.",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["carbon", "footprint", "energy", "awareness", "environment", "backend"],
+  "author": "Your Name",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
