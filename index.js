@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser";
 // Import route files
 import authRoutes from "./routes/authRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
+import performanceRoutes from './routes/performanceRoutes.js';
 
 // Load env configurations
 dotenv.config();
@@ -50,6 +51,7 @@ app.get("/", (req, res) => {
 // Routes
 app.use("/auth", authRoutes);
 app.use("/contact", contactRoutes);
+app.use('/api', performanceRoutes);
 
 // MongoDB Connection
 mongoose
